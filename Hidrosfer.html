@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hidrosfer - Geografi SMA 8 Tangsel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    let currentSlide = 0;
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      if (index >= 0 && index < slides.length) {
+        slides.forEach((slide, i) => {
+          slide.style.display = i === index ? 'flex' : 'none';
+        });
+        currentSlide = index;
+        document.getElementById('slide-number').textContent = `Slide ${currentSlide + 1} / ${slides.length}`;
+      }
+    }
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+    document.addEventListener('DOMContentLoaded', () => showSlide(0));
+  </script>
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-teal-200 min-h-screen font-sans">
+  <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center space-y-2">
+    <div id="slide-number" class="text-white text-lg font-semibold">Slide 1</div>
+    <div class="flex gap-4">
+      <button onclick="prevSlide()" class="bg-pink-500 hover:bg-pink-600 p-6 rounded-full shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button onclick="nextSlide()" class="bg-green-500 hover:bg-green-600 p-6 rounded-full shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="w-screen h-screen">
+    <div class="w-full h-full overflow-hidden">
+      <div class="w-full h-full">
+        <!-- SLIDE 1 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4">HIDROSFER</h2>
+          <p class="text-3xl md:text-4xl">Team Teaching Geografi<br>SMA Negeri 8 Kota Tangerang Selatan</p>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold mb-4">Volume Air Dunia</h2>
+          <p class="text-3xl">97,5% air asin | 2,5% air tawar<br>70% permukaan bumi tertutup air<br>Kurang dari 1% air tawar tersedia untuk kehidupan</p>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold mb-4">Siklus Hidrologi Pendek</h2>
+          <p class="text-3xl">Evaporasi ? Kondensasi ? Presipitasi (langsung ke laut)</p>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Short_Hydrologic_Cycle_ID.svg/800px-Short_Hydrologic_Cycle_ID.svg.png" alt="Siklus Hidrologi Pendek" class="max-h-[70vh] w-auto">
+        </div>
+
+        <!-- SLIDE 5 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold mb-4">Siklus Hidrologi Sedang</h2>
+          <p class="text-3xl">Evaporasi ? Kondensasi ? Presipitasi ? Permukaan ? Laut</p>
+        </div>
+
+        <!-- SLIDE 6 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Cycle_Hidrologi_Sedang_ID.svg/800px-Cycle_Hidrologi_Sedang_ID.svg.png" alt="Siklus Hidrologi Sedang" class="max-h-[70vh] w-auto">
+        </div>
+
+        <!-- SLIDE 7 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold mb-4">Siklus Hidrologi Panjang</h2>
+          <p class="text-3xl">Evaporasi ? Kondensasi ? Salju ? Es ? Aliran ? Sungai ? Laut</p>
+        </div>
+
+        <!-- SLIDE 8 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cycle_Hidrologi_Panjang_ID.svg/800px-Cycle_Hidrologi_Panjang_ID.svg.png" alt="Siklus Hidrologi Panjang" class="max-h-[70vh] w-auto">
+        </div>
+
+        <!-- SLIDE 9 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold mb-4">Istilah dalam Hidrologi</h2>
+          <p class="text-2xl">Evaporasi, Transpirasi, Kondensasi, Presipitasi, Infiltrasi, Perkolasi, Run-off</p>
+        </div>
+
+        <!-- SLIDE 10 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-5xl font-bold">Perairan Darat</h2>
+        </div>
+
+        <!-- SLIDE 11 -->
+        <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+          <h2 class="text-4xl font-bold mb-4">Jenis Perairan Darat</h2>
+          <p class="text-2xl">1. Air Permukaan<br>2. Air Tanah (underground)<br>3. Perairan Beku</p>
+        </div>
+
+        <!-- SLIDE 12 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Sungai dan Genesa Sungai dari Proses Erosi</h2>
+  <p class="text-2xl">
+    Erosi Splash, Sheet, Rill, Gully membentuk genesa sungai<br>
+    Proses ini menggerus permukaan tanah membentuk aliran air
+  </p>
+</div>
+
+<!-- SLIDE 13 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Jenis Sungai</h2>
+  <p class="text-2xl">
+    Berdasarkan airnya: Permanen dan Musiman<br>
+    Berdasarkan keaktifannya: Sungai aktif, stabil, dan mati
+  </p>
+</div>
+
+<!-- SLIDE 14 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Bagian-Bagian Sungai</h2>
+  <p class="text-2xl">
+    Hulu, Tengah, Hilir, Daerah Aliran Sungai (DAS)
+  </p>
+</div>
+
+<!-- SLIDE 15 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Danau dan Genesa-nya</h2>
+  <p class="text-2xl">
+    Danau terbentuk dari cekungan akibat glasial, tektonik, vulkanik, atau bendungan alam
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Great_Lakes_Locator_Map.png" alt="Peta Danau" class="max-h-[60vh] w-auto mt-4 rounded shadow-lg">
+</div>
+
+<!-- SLIDE 16 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Rawa dan Jenis-Jenis Rawa</h2>
+  <p class="text-2xl">
+    Rawa Gambut, Rawa Pasang Surut, dan Rawa Air Tawar
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Peatland_Ecosystem_in_Sumatra.jpg" alt="Rawa Gambut" class="max-h-[60vh] w-auto mt-4 rounded shadow-lg">
+</div>
+
+<!-- SLIDE 17 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Air Tanah dan Jenis-Jenisnya</h2>
+  <p class="text-2xl">
+    Air Tanah Terikat, Air Tanah Bebas, dan Air Tanah Dalam (Akuifer)
+  </p>
+</div>
+
+<!-- SLIDE 18 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Proses Air Tanah</h2>
+  <p class="text-2xl">
+    Infiltrasi, Perkolasi, dan Resapan Air ke Akuifer
+  </p>
+</div>
+
+<!-- SLIDE 19 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Jenis Akuifer</h2>
+  <p class="text-2xl">
+    Akuifer Terbuka dan Akuifer Tertutup
+  </p>
+</div>
+
+<!-- SLIDE 20 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Perairan Laut</h2>
+  <p class="text-2xl">
+    Laut sebagai sumber daya air asin dan habitat berbagai ekosistem
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Oceanic_divisions_EN.svg/800px-Oceanic_divisions_EN.svg.png" alt="Peta Laut Dunia" class="max-h-[60vh] w-auto mt-4 rounded shadow-lg">
+</div>
+
+<!-- SLIDE 21 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Fun Fact Laut Dunia</h2>
+  <p class="text-2xl">
+    Laut menutupi 71% permukaan bumi dan menjadi habitat jutaan spesies
+  </p>
+</div>
+
+<!-- SLIDE 22 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Morfologi Laut</h2>
+  <p class="text-2xl">
+    Morfologi Horizontal: Pantai, Selat, Teluk<br>
+    Morfologi Vertikal: Zona Intertidal, Neritik, Oseanik
+  </p>
+</div>
+
+<!-- SLIDE 23 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Komposisi Air Laut</h2>
+  <p class="text-2xl">
+    Kimia: Garam (NaCl), Mineral<br>
+    Fisika: Suhu, Kepadatan, Gelombang
+  </p>
+</div>
+
+<!-- SLIDE 24 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Sabuk Arus Laut Dunia</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Global_ocean_currents.svg/800px-Global_ocean_currents.svg.png" alt="Sabuk Arus Laut Dunia" class="max-h-[60vh] w-auto mt-4 rounded shadow-lg">
+</div>
+
+<!-- SLIDE 25 -->
+<div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center p-6 animate-fade-in">
+  <h2 class="text-4xl font-bold mb-4">Arus dan Gelombang Laut</h2>
+  <p class="text-2xl">
+    Arus laut adalah aliran air laut yang bergerak<br>
+    Gelombang laut dipengaruhi oleh angin, gravitasi, dan pasang surut
+  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Waves_diagram.svg/800px-Waves_diagram.svg.png" alt="Gelombang Laut" class="max-h-[60vh] w-auto mt-4 rounded shadow-lg">
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
